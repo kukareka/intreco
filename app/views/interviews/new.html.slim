@@ -1,0 +1,8 @@
+h1 New interview
+
+= form_with model: Interview.new do |f|
+  .form-group
+    = f.label :name
+    = f.text_field :name, label: 'Name', class: 'form-control'
+  .form-group
+    = f.submit 'Create'

@@ -1,0 +1,22 @@
+h1 Interviews
+
+p.text-right= link_to 'New interview', new_interview_path, class: 'btn btn-primary'
+
+table.table
+  thead
+    tr
+      th Interview
+      th Status
+      th Expert link
+      th Candidate link
+      th Recording
+      th
+  tbody
+    - @interviews.each do |i|
+      tr
+        td= i.name
+        td= i.status
+        td= link_to nil, interview_url(i.expert_token.code)
+        td= link_to nil, interview_url(i.candidate_token.code)
+        td TODO
+        td= link_to 'Delete', interview_path(i), class: 'btn btn-danger', method: :delete
