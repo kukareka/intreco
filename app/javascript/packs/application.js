@@ -19,3 +19,20 @@ require("channels")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+//
+// import { Janus } from 'janus-gateway';
+//
+// Janus.init({
+//   debug: true,
+//   dependencies: Janus.useDefaultDependencies(), // or: Janus.useOldDependencies() to get the behaviour of previous Janus versions
+//   callback: function () {
+//     console.log("Janus init completed");
+//   }
+// });
+
+document.addEventListener("turbolinks:load", function() {
+  let videochat = document.getElementById('videochat')
+  if (videochat) {
+    require('janus/videochat').start(parseInt(videochat.dataset.roomId), videochat.dataset.role)
+  }
+})

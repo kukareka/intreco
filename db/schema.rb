@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 2020_07_16_192418) do
   create_table "interviews", force: :cascade do |t|
     t.string "name"
     t.string "status"
+    t.integer "room_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

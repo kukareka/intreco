@@ -5,3 +5,8 @@ dl
   dd= @interview.name
   dt Role
   dd= @token.role
+
+- if @token.role == 'expert'
+  // TODO: button to finish interview
+
+#videochat data-room-id="#{@interview.room_id}" data-role="#{@token.role}"= render 'videochat'
