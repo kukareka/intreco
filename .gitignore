@@ -41,4 +41,3 @@ yarn-debug.log*
 .yarn-integrity
 
 /janus/recordings/*
-/janus/janus.log
